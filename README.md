@@ -1,4 +1,6 @@
-# SvelteKit Static Site
+# awesome
+
+A SvelteKit conversion of my GitHub Pages site.
 
 This is a SvelteKit project configured for static site generation using JavaScript.
 
@@ -44,4 +46,3 @@ This project is configured with:
 - **Prerendering** - Enabled by default via `src/routes/+layout.js`
 
 All routes are prerendered by default. To disable prerendering for specific routes, remove or modify the `prerender` export in the route's `+layout.js` or `+page.js` file.
-
