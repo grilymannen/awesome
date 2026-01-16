@@ -1,19 +1,21 @@
 <script>
-	import { page } from '$app/stores';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Theme from '$lib/components/Theme.svelte';
 </script>
 
-<nav>
-	<div class="nav-container">
-		<a href="/" class="logo">Awesome</a>
-
-		<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
-
-		<a href="/about" class:active={$page.url.pathname === '/about'}>About</a>
-
-	</div>
-</nav>
-
+<Navbar />
+<Theme />
 <main>
 	<slot />
 </main>
+
+<style>
+	:global(body) {
+		margin: 0;
+		min-height: 100vh;
+		background-color: #17181a;
+		color: #e5e7eb;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	}
+</style>
 
