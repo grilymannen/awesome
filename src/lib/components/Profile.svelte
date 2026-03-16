@@ -34,7 +34,7 @@
     .widget-btm {
         height: 56px;
         width: 446px;
-        background-color: #323339;
+        background-color: Ö;
         display: flex;
         justify-content: center;
         border-radius: 8px;
@@ -75,7 +75,7 @@
         position: absolute;
         bottom: -3px;
         right: -3px;
-        border: 3px #323339 solid;
+        border: 3px #2c2d32 solid;
     }
     .voice-indicator {
         position: absolute;
