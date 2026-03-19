@@ -1,5 +1,20 @@
 <script>
-  import { formatServerName } from '$lib/utils.js'
+  import { formatServerName } from '$lib/utils.js';
+    const serverTemplate = {
+    name: "Your Server", // Add username possibly?
+    icon: "",
+    unread: false,
+    active: false,
+    pings: 0,
+    participants: [],
+    badge: {
+      boosts: 0,
+      community: false,
+      verified: false,
+      partner: false,
+    }
+  }
+  
   /*
     relevant server props
     {
@@ -19,7 +34,7 @@
       }
     }
   */
-
+  
 </script>
 {#if serv}
   <div class="server-wrapper">

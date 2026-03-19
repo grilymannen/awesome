@@ -1,23 +1,12 @@
 <script>
   import Server from '$lib/components/Server.svelte';
-
+  import { user } from '$lib/components/user.svelte.js';
   
 
-  const serverTemplate = {
-    name: "Your Server", // Add username possibly?
-    icon: "",
-    unread: false,
-    active: false,
-    pings: 0,
-    participants: [],
-    badge: {
-      boosts: 0,
-      community: false,
-      verified: false,
-      partner: false,
-    }
+  if (!user.servers) {
+    user.servers = [];
   }
-
+  const serverList = user.servers;
 </script>
 
 <nav class="server-list">
@@ -35,7 +24,7 @@
   {/each}
 
 
-
+  
 
   <button class="special-icon" aria-label="add-server" onclick={addServer}>
     <!--Bootstrap SVG: https://icons.getbootstrap.com/icons/plus-circle-fill/-->
