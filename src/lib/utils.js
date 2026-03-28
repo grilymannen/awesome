@@ -1,5 +1,5 @@
 /**
- * 
+ * Capitalizes a word
  * @param {string} s 
  * @returns {string}
  */
@@ -10,8 +10,8 @@ export function capitalize(s) {
 }
 
 /**
- * 
- * @param {string} s - 
+ * Capitalizes every word
+ * @param {string} s 
  * @returns {string}
  */
 export function deepCapitalize(s) {
@@ -20,7 +20,11 @@ export function deepCapitalize(s) {
     .map(word => capitalize(word)
     .join(' '));
 }
-
+/**
+ * Formats server names, abbreviating letters and numbers
+ * @param {string} name - The name to format
+ * @returns {string}
+ */
 export function formatServerName(name) {
   if (!name) return "";
   
@@ -36,4 +40,13 @@ export function formatServerName(name) {
       return word;
     })
     .join("");
+}
+/**
+ * Gets a random index from an array
+ * @param {Array} array - The array of which to get the random index from
+ * @returns {*} The returned index
+ */
+export function pickRandomIndex(array) {
+  const index = Math.floor(Math.random() * array.length);
+  return array[index];
 }
