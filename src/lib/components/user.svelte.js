@@ -1,3 +1,1 @@
-import { browser } from "$app/environment";
-
-export let user = {};
+export const curUser = {};

@@ -7,31 +7,34 @@
 	<a href="/discord">Discord (Clone)</a>
 	<a href="/calculator">Calculator</a>
 
-	<button onclick={hideLinks = !hideLinks}>X</button>
+	<button onclick={hideLinks = !hideLinks}>✖</button>
 </nav>
 
 <style>
 	a {
-		margin: 0px 5px;
-	}
-	.hide a {
-		display: none;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	}
 	.navbar {
 		display: flex;
 		position: fixed;
 		justify-content: space-evenly;
-		top:0;
-		left:0;
-		padding: 0 5px;
+		top: 0;
+		left: 0;
+		gap: 8px;
+		padding: 4px;
 		background-color: rgba(0,0,0,0.1);
 		color: white;
+		transition: left 500ms;
+	}
+	.navbar.hide {
+		left: -280px;
 	}
 	.navbar * {
-		background-color: rgba(0,0,0,0.1);
+		background-color: transparent;
 		color: inherit;
 		border: none;
 		cursor: pointer;
 	}
+	
 
 </style>
