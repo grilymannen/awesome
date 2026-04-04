@@ -268,7 +268,7 @@
     <input type="number" min="0" max="100" step="10" bind:value={sortState.settings.delay} disabled={sortState.session.isSorting} />
 
     <label for="size">Array Size:</label>
-    <input type="number" min="5" max="500" value={array.length} onchange={(e) => updateArrayLength(e.target.value)} disabled={sortState.session.isSorting} />
+    <input type="number" min="5" max="500" value={array.length} oninput={(e) => updateArrayLength(e.target.value)} disabled={sortState.session.isSorting} />
 
     <label for="algorithm">Algorithm:</label>
     <select bind:value={sortState.settings.algorithm} disabled={sortState.session.isSorting}>
@@ -282,7 +282,7 @@
     <input type="checkbox" bind:checked={sortState.settings.autoShuffle} />
 
     <label for="party-mode">Party Mode:</label>
-    <input type="checkbox" bind:checked={sortState.settings.partyMode} onchange={partyMode} />
+    <input type="checkbox" bind:checked={sortState.settings.partyMode} oninput={partyMode} />
 </div>
 
 <div class="result-container" class:last-result={sortState.history.results.length === 5}>

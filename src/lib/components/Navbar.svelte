@@ -5,7 +5,6 @@
 	<a href="/">Home</a>
 	<a href="/sort">Sorting</a>
 	<a href="/discord">Discord (Clone)</a>
-	<a href="/calculator">Calculator</a>
 
 	<button onclick={hideLinks = !hideLinks}>✖</button>
 </nav>

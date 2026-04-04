@@ -1,6 +1,7 @@
 <script>
   import { mount } from "svelte";
   import Notification from "$lib/components/Notification.svelte";
+  
   function addNotification(text) {
     const target = document.getElementById("notification-bar");
     mount(Notification, {
@@ -20,7 +21,7 @@
 </header>
 
 <div id="notification-bar"></div>
-<button onclick={addNotification("Hello, World!")}>Add notification</button>
+<button onclick={addNotification("Hello, World!")} style="background-color: #333">Add notification</button>
 <style>
   :global(body) {
     background-color: #222;
